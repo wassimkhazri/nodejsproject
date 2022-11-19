@@ -1,0 +1,37 @@
+<%- include('parts/top.ejs')%>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container" style="width: fit-content;">
+  <%if(book){%>
+  <div class="row" >
+    <div class="col">
+      <img src="/uploads/<%= book.image %>" alt="">
+    </div>
+    <div class="col">
+      <h1>
+        <%= book.title %>
+      </h1>
+      <h4>
+        <%= book.author %>
+      </h4>
+      <span>
+        <%= book.price %> $
+      </span>
+      <p>
+        <%= book.description %>
+      </p>
+    </div>
+  </div>
+  <%}else{%>
+  <div class="col">
+    <img src="/uploads/log1.png%>" alt="">
+  </div>
+  <%}%>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <%- include('parts/bottom.ejs')%>
